@@ -55,6 +55,20 @@ GPIO.setup(motor_4, GPIO.OUT)
 
 app = Flask(__name__)
 
+def apply_mask(matrix, mask, fill_value):
+    masked = np.ma.array(matrix, mask=mask, fill_value=fill_value)
+    return masked.filled()
+
+
+def apply_threshold(matrix, low_value, high_value):
+    low_mask = matrix < low_value
+    matrix = apply_mask(matrix, low_mask, low_value)
+
+    high_mask = matrix > high_value
+    matrix = apply_mask(matrix, high_mask, high_value)
+
+    return matrix
+
 
 if __name__ == "__main__":
     app.run()
