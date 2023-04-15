@@ -1,5 +1,5 @@
 # Croplyzer
-## An IoT technology using Raspberry Pi driven by AI/ML technology that predicts maturity of crops/fruits in an agricultural farm.
+## An IoT technology using Raspberry Pi driven by AI/ML technology that predicts maturity of fruits in an agricultural farm.
 
 ### Team name: Dev Devils
 
