@@ -51,6 +51,12 @@ Tools and technologies that you learnt and used in the project.
 ## Future scope
 * Making the application an intuitive and multilingual Android app for farmers that allows them to control the bot in the form of speech or text. 
 * Increasing the accuracy of the existing Machine Learning Model as well as adding one more algorithm to predict in how many days a crop will possibly ripen along with giving market value for the crops based on their maturity.
+* The next feature would include measuring the maturity of crops on the basis of weather and how the influence of weather would further cause changes to the maturity of the crops. 
+* The next feature which we plan to include is monitoring of soil moisture and finally creating a system for disease detection of crops and providing farmers with a website for analyzing the prices of which they could sell their crops. 
+* We plan to collaborate with government organizations which will prompt the farmers to use this technology. In this way, the product can be given to the farmers as derivatives from the government.
+* There aren't many such systems on the market. We expect to  propose various unique methods and provide farmers with a complete farming solution to determine maturity of crops and take adequate measures incase of diseases or changes in crops due to weather impact. 
+* Thus, replicating all these features is an exhaustive task but we plan to achieve a complete farming solution in the future.
+
 
 ## Screenshots
 | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding1.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding2.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding3.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/HomePage.jpeg) |
