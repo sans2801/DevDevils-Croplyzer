@@ -63,6 +63,6 @@ Tools and technologies that you learnt and used in the project.
 | :-------------: | :-------------:  | :-------------:  | :-------------:  |
 |     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      HomePage     |
 
-| ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/Home_with_image.jpeg) | ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/Detection_Page.jpeg) |
+| ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/HomePage_with_clicked_image.jpeg) | ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/Detection_Page.jpeg) |
 | :-------------: | :-------------:  | 
 |     Home Page with Image     |    Maturity Prediction   |    
