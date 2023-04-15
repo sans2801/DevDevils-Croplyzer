@@ -22,6 +22,7 @@
 * GitHub Repo link: [Link to GitHub Repository](https://github.com/sans2801/DevDevils-Croplyzer)
 * Application Demo Video: [YouTube Video](https://youtu.be/RHfaqZ2uXfA)
 * Presentation of the solution: [Presentation Link](https://docs.google.com/presentation/d/1PFB0NjZRvAKWHNt8mGchfw8GYU3yKbuU_sBTPApztHY/edit?usp=sharing)
+* Problem statement and Solution PDF: [Link to PDF](https://drive.google.com/file/d/1mgnl5jCZQx9PYJS9_7DTQM4PO5_DIpIZ/view?usp=sharing)
 
 ## Technology stack
 
