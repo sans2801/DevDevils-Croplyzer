@@ -107,5 +107,144 @@ def simplest_cb(img, percent):
     return cv2.merge(out_channels)
 
 
+def motor1_forward():
+    #Upward
+    const_forward = 20
+    start = dit.get_servo_pulsewidth(servo_1)
+    delta = 10
+    end = 1600
+    incMove = (end-start)/100.0
+    incTime = delta/100.0
+    for x in range(1):
+        dit.set_servo_pulsewidth(servo_1, int(1580))
+        print(start+x*incMove, incTime)
+        time.sleep(incTime)
+
+    dit.set_servo_pulsewidth(servo_1, 0)
+    print("motor1=1600")
+
+
+def motor1_reverse():
+    #Downward
+    # dit.set_servo_pulsewidth(servos[0], 1500)
+    const_reverse = 20
+    start = dit.get_servo_pulsewidth(servo_1)
+    print(start)
+    delta = 10
+    end = 750
+    incMove = (end-start)/100.0
+    incTime = delta/100.0
+    for x in range(1):
+        dit.set_servo_pulsewidth(servo_1, int(1440))
+        print(start+x*incMove, incTime)
+        time.sleep(incTime)
+
+    dit.set_servo_pulsewidth(servo_1, 0)
+    # print(dit.get_servo_pulsewidth(4))
+    print("motor1=1400")
+
+
+def motor1_stop():
+    dit.set_servo_pulsewidth(servo_1, 1500)
+    print(dit.get_servo_pulsewidth(servo_1))
+    print("motor1=1500")
+
+
+def motor2_forward():
+    const_forward = 20
+    start = dit.get_servo_pulsewidth(servo_2)
+    delta = 10
+    end = 1600
+    incMove = (end-start)/100.0
+    incTime = delta/100.0
+    for x in range(2):
+        dit.set_servo_pulsewidth(servo_2, int(1600))
+        print(start+x*incMove, incTime)
+        time.sleep(incTime)
+
+    dit.set_servo_pulsewidth(servo_2, 0)
+    print("motor2=1600")
+
+
+def motor2_reverse():
+    # dit.set_servo_pulsewidth(servos[0], 1500)
+    const_reverse = 20
+    start = dit.get_servo_pulsewidth(servo_2)
+    print(start)
+    delta = 10
+    end = 1400
+    incMove = (end-start)/100.0
+    incTime = delta/100.0
+    for x in range(1):
+        dit.set_servo_pulsewidth(servo_2, int(1469))
+        print(start+x*incMove, incTime)
+        time.sleep(incTime)
+
+    dit.set_servo_pulsewidth(servo_2, 0)
+    # print(dit.get_servo_pulsewidth(4))
+    print("motor2=1400")
+
+
+def motor2_stop():
+    dit.set_servo_pulsewidth(servo_2, 1500)
+    print(dit.get_servo_pulsewidth(servo_2))
+    print("motor2=1500")
+
+
+def motor3_forward():
+    start = dit.get_servo_pulsewidth(servo_3)
+    print(start)
+    delta = 100
+    end = 2250
+    # incMove=(end-start)/10.0
+    incMove = 150
+    incTime = delta/100.0
+    for x in range(2):
+        if int(start+x*incMove) >= MIN_WIDTH and int(start+x*incMove) <= MAX_WIDTH:
+            # dit.set_servo_pulsewidth(17, int(start+x*incMove))
+            dit.set_servo_pulsewidth(servo_3, int(start+x*incMove))
+            # print(start+x*incMove, incTime)
+            time.sleep(1)
+        else:
+            break
+
+    dit.set_servo_pulsewidth(servo_3, 0)
+    print(dit.get_servo_pulsewidth(servo_3))
+    print("motor3=1600")
+
+
+def motor3_reverse():
+
+    start = dit.get_servo_pulsewidth(servo_3)
+    print(start)
+    delta = 100
+    end = 750
+    # incMove=(end-start)/10.0
+    incMove = -150
+    incTime = delta/100.0
+    for x in range(2):
+        if int(start+x*incMove) >= MIN_WIDTH and int(start+x*incMove) <= MAX_WIDTH:
+            # dit.set_servo_pulsewidth(17, int(start+x*incMove))
+            dit.set_servo_pulsewidth(servo_3, int(start+x*incMove))
+            # print(start+x*incMove, incTime)
+            time.sleep(1)
+        else:
+            break
+
+    dit.set_servo_pulsewidth(servo_3, 0)
+    print(dit.get_servo_pulsewidth(servo_3))
+    print("motor3=1400")
+
+
+def motor3_stop():
+    dit.set_servo_pulsewidth(servo_3, 1500)
+    print(dit.get_servo_pulsewidth(servo_3))
+    print("motor3=1500")
+
+
+def get_pwm(motor):
+    print(dit.get_servo_pulsewidth(motor))
+
+
 if __name__ == "__main__":
     app.run()
