@@ -46,7 +46,7 @@ Tools and technologies that you learnt and used in the project.
 
 ## Flowchart
 
-<img src="https://github.com/Vriddhigupta/Croplyzer/blob/main/croplyzer.drawio.png" width="1000">
+<img src="https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/Flowchart.png" width="1000">
 
 ## Future scope
 * Making the application an intuitive and multilingual Android app for farmers that allows them to control the bot in the form of speech or text. 
@@ -59,10 +59,10 @@ Tools and technologies that you learnt and used in the project.
 
 
 ## Screenshots
-| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding1.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding2.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding3.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/HomePage.jpeg) |
+| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding1.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding2.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Onboarding3.jpeg) | ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/HomePage%20(2).jpeg) |
 | :-------------: | :-------------:  | :-------------:  | :-------------:  |
 |     Onboarding Screen1     |    Onboarding Screen2   |    Onboarding Screen3     |      HomePage     |
 
-| ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/Home_with_image.jpeg) | ![](https://github.com/Vriddhigupta/Croplyzer/blob/main/prediction.jpeg) |
+| ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/Home_with_image.jpeg) | ![](https://github.com/sans2801/DevDevils-Croplyzer/blob/master/app-client/Detection_Page.jpeg) |
 | :-------------: | :-------------:  | 
 |     Home Page with Image     |    Maturity Prediction   |    
