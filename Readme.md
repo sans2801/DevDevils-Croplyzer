@@ -4,8 +4,8 @@
 ### Team name: Dev Devils
 
 ## Team members
-* Vriddhi Gupta - vagupta_b19@it.vjti.ac.in
-* Neel Dandiwala - nddandiwala_b19@it.vjti.ac.in
+* Vriddhi Gupta - vriddhigupta898@gmail.com
+* Neel Dandiwala - neeldandi@gmail.com
 * Prasad Thakare - thakareprasad80@gmail.com
 * Tanish Sawant - tanish.sawant5@gmail.com
 
