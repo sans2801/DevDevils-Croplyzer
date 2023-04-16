@@ -245,6 +245,106 @@ def motor3_stop():
 def get_pwm(motor):
     print(dit.get_servo_pulsewidth(motor))
 
+@app.route('/',  methods=['POST'])
+def workflow():
+    req = json.loads(request.data)
+    val = req["service"]
+    print(val)
+    if val == "camera":
+        cam = cv2.VideoCapture(0)
+        ret, image = cam.read()
+        # cv2.imshow('Imagetest', image)
+        result = simplest_cb(image, 1)
+        # cv2.imwrite('image2.jpg', image)
+        cv2.imwrite('image-filtered.jpg', result)
+        cam.release()
+        uploaded_image = imgur_client.upload_image('image-filtered.jpg') 
+        print(uploaded_image.link)  
+        return uploaded_image.link
+
+    if val == "footage":
+        cam = cv2.VideoCapture(0)
+        ret, image = cam.read()
+        cv2.imwrite('image-normal.jpg', image)
+        cam.release()
+        # _, im_arr = cv2.imencode('.jpg', image)  # im_arr: image in Numpy one-dim array format.
+        # im_bytes = im_arr.tobytes()
+        # im_b64 = base64.b64encode(im_bytes)
+        uploaded_image = imgur_client.upload_image('image-normal.jpg') 
+        print(uploaded_image.link)     
+        return uploaded_image.link
+
+    if val == "forward":
+        delay = req["time"]
+        GPIO.output(motor_1, True)
+        GPIO.output(motor_3, True)
+        time.sleep(delay)
+        GPIO.output(motor_1, False)
+        GPIO.output(motor_3, False)
+        time.sleep(1)
+        return "Moved Forward"
+
+    if val == "right":
+        GPIO.output(motor_1, True)
+        time.sleep(2)
+        GPIO.output(motor_1, False)
+        return "Moved Right"
+
+    if val == "left":
+        GPIO.output(motor_3, True)
+        time.sleep(2)
+        GPIO.output(motor_3, False)
+        return "Moved Left"
+
+    if val == "backward":
+        delay = req["time"]
+        GPIO.output(motor_2, True)
+        GPIO.output(motor_4, True)
+        time.sleep(delay)
+        GPIO.output(motor_2, False)
+        GPIO.output(motor_4, False)
+        time.sleep(1)
+        return "Moved Backward"
+
+    if val == "motor1":
+        direction = req["direction"]
+        if direction == "upward":
+            motor1_forward()
+            return "Motor1 - Upward"
+        elif direction == "downward":
+            motor1_reverse()
+            return "Motor1 - Downward"
+        else:
+            motor1_stop()
+            return "Motor1 - Stop"
+
+    if val == "motor2":
+        direction = req["direction"]
+        if direction == "backward":
+            motor2_forward()
+            return "Motor2 - Backward"
+        elif direction == "forward":
+            motor2_reverse()
+            return "Motor2 - Forward"
+        else:
+            motor2_stop()
+            return "Motor2 - Stop"
+
+    if val == "motor3":
+        direction = req["direction"]
+        if direction == "right":
+            motor3_forward()
+            return "Motor3 - Right"
+        elif direction == "left":
+            motor3_reverse()
+            return "Motor3 - Left"
+        else:
+            motor3_stop()
+            return "Motor3 - Stop"
+
+    print("Nothing specified")
+    return "None"
+
 
 if __name__ == "__main__":
     app.run()
